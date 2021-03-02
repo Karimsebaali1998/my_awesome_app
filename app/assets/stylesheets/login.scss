@@ -1,0 +1,128 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeff6;
+}
+
+.login__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
+  min-height: 475px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.login__logo {
+  position: relative;
+  top: -65px;
+  width: 130px;
+  height: 130px;
+}
+
+.login__title-wrapper {
+  position: relative;
+  top: -25px;
+  text-align: center;
+}
+
+.login__title {
+  color: #2c3447;
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.login__form {
+  display: grid;
+  grid-template-areas: "email" "password" "forgot-password" "sign-in";
+  grid-template-rows: 86px 73px 67px 63px;
+}
+
+.login__label {
+  font-size: 11px;
+  letter-spacing: -0.26px;
+  color: #2c3447;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.login__input {
+  height: 35px;
+  width: 250px;
+  border-radius: 3px;
+  background-color: #eeeff6;
+  border: none;
+  font-size: 14px;
+  letter-spacing: -0.34px;
+  color: #c7c7c9;
+}
+
+.login__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__input-wrapper--email-grid-area {
+  grid-area: email;
+}
+
+.login__input-wrapper--password-grid-area {
+  grid-area: password;
+}
+
+::placeholder {
+  height: 27px;
+  font-size: 14px;
+  line-height: 1.93;
+  letter-spacing: -0.34px;
+  color: #c7c7c9;
+}
+
+.login__forgot-password {
+  grid-area: forgot-password;
+  justify-self: center;
+  text-align: center;
+  width: 159px;
+  height: 27px;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: -0.29px;
+  color: #9494c3;
+}
+
+.login__forgot-password:hover {
+  transform: scale(1.5);
+}
+
+.login__sign-in {
+  width: 246px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid 1px #3ca2b9;
+  background-color: inherit;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.34px;
+  color: #3ca2b9;
+}
+
+.login__sign-in:hover {
+  color: #fff;
+  background-color: #3ca2b9;
+  cursor: pointer;
+}
