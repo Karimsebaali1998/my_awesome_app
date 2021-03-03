@@ -7,7 +7,7 @@ class UserTest < ActiveSupport::TestCase
     @user = User.create({
                           first_name: 'Rami',
                           last_name: 'Rizk',
-                          email: 'rami@karim.com'
+                          email: 'rami@sebaali.com'
                         })
   end
 
@@ -59,7 +59,7 @@ class UserTest < ActiveSupport::TestCase
     @user = User.create({
                           first_name: 'Karim',
                           last_name: 'Sebaali',
-                          email: 'rami@karim.com'
+                          email: 'rami@sebaali.com'
                         })
     assert @user.invalid?
     assert_equal @user.errors[:email].length, 1
