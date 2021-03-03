@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :role, inclusion: { in: %w(member admin), message: "%{value} is not a valid role" }
+  validates :role, inclusion: { in: %w[member admin], message: '%<value>s is not a valid role' }
 
   def full_name
     "#{first_name} #{last_name}"
