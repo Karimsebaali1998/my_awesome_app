@@ -1,21 +1,21 @@
+# frozen_string_literal: true
+
 module SessionsHelper
-    def login(user)
-      session[:user_id] = user.id
-    end
-  
-    def current_user
-      User.find_by(id: session[:user_id])
-    end
-  
-    def logged_in?
-      if (Rails.env.test?)
-        return true
-      end
-      !current_user.nil?
-    end
-  
-    def log_out
-      session.delete(:user_id)
-    end
+  def login(user)
+    session[:user_id] = user.id
   end
-  
+
+  def current_user
+    User.find_by(id: session[:user_id])
+  end
+
+  def logged_in?
+    return true if Rails.env.test?
+
+    !current_user.nil?
+  end
+
+  def log_out
+    session.delete(:user_id)
+  end
+end

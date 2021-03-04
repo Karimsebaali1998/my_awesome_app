@@ -5,12 +5,12 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
   setup do
     @user = User.create({
-      first_name: 'Rami',
-      last_name: 'Rizk',
-      email: 'rami@karim.com',
-      password: '1234',
-      password_confirmation: '1234'
-    })
+                          first_name: 'Rami',
+                          last_name: 'Rizk',
+                          email: 'rami@karim.com',
+                          password: '1234',
+                          password_confirmation: '1234'
+                        })
   end
 
   test 'getting the full name' do
