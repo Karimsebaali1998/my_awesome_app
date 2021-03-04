@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Login Page</title>
+    <link rel="stylesheet" href="login.scss">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+    <%= favicon_link_tag 'logo.svg' %>
+  </head>
+  <body>
+    <main class="login">
+      <div class="login__container">
+        <img class="login__logo" src= <%=asset_path('logo.svg')%> alt="gt logo">
+        <div class="login__title-wrapper">
+          <h1 class="login__title">Welcome!</h1>
+          <h1 class="login__title"> Sign In Below</h1>
+        </div>
+          <%= form_for(:session, url: login_path, :html => {:class => 'login__form'}) do |form| %>
+            <% if @alert.present? %>
+              <div id="error_explanation" style= "width:250px">
+                <h2><%= @alert %></h2>
+              </div>
+            <% end %>
+
+            <div class="login__input-wrapper login__input-wrapper--email-grid-area">
+              <%= form.label :email, class:'login__label' %>
+              <%= form.text_field :email, class:'login__input' %>
+            </div>
+
+            <div class="login__input-wrapper login__input-wrapper--password-grid-area">
+              <%= form.label :password, class:'login__label' %>
+              <%= form.password_field :password, class:'login__input' %>
+            </div>
+
+            <a class="login__forgot-password" href="">Forgot your password?</a>
+            <div class="actions">
+              <%= form.submit "Log In" , class:'login__sign-in' %>
+            </div>
+          <% end %>
+      </div>
+    </main>
+  </body>
+</html>
