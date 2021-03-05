@@ -5,6 +5,7 @@ require 'test_helper'
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @user = users(:one)
+    log_in_as(@user, '1234')
   end
 
   test 'should get index' do

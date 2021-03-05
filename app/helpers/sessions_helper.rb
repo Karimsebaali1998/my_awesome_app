@@ -10,8 +10,6 @@ module SessionsHelper
   end
 
   def logged_in?
-    return true if Rails.env.test?
-
     !current_user.nil?
   end
 
