@@ -4,10 +4,12 @@ one:
   first_name: Rami
   last_name: Rizk
   email: rami@gtlogic.com
+  role: 'member'
   password_digest: <%= User.digest('1234') %>
 
 two:
   first_name: Teddy
   last_name: Zeenny
   email: teddy@gtlogic.com
+  role: 'member'
   password_digest: <%= User.digest('1234') %>

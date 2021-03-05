@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
-  def new; end
+  def new
+    redirect_to root_path if logged_in?
+  end
 
   def create
     user = User.find_by_email(params[:session][:email])

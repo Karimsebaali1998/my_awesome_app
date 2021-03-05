@@ -26,8 +26,10 @@
     <%= form.text_field :email %>
   </div>
 
-  <%= form.label :role %>
-  <%= form.select(:role, collection: [['member', 'member'], ['admin' , 'admin']])%>
+  <div class ="field">
+    <%= form.label :role %>
+    <%= form.select(:role, collection: [['member', 'member'], ['admin' , 'admin']])%>
+  </div>
 
   <div class="field">
     <%= form.label :password %>

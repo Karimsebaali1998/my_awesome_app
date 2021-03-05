@@ -70,6 +70,6 @@ class UsersController < ApplicationController
   end
 
   def restrict_access
-    redirect_to root_path unless logged_in?
+    redirect_to login_path unless logged_in?
   end
 end
