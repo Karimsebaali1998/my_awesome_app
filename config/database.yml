@@ -23,6 +23,8 @@ development:
 test:
   <<: *default
   database: my_awesome_app_test
+  username: Karimsebaaligt
+  password: password
 
 production:
   <<: *default
